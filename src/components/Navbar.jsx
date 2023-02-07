@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className="shadow d-flex justify-content-around p-2 ">
       {/* mobile navbar  */}
 
-      <Link to={"/"} className="fs-2 fw-bold text-dark">
+      <Link to={"/"} className="fs-1 fw-bold text-dark">
         Eat well
       </Link>
 
