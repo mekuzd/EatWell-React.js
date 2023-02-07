@@ -1,0 +1,62 @@
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+}
+a :hover {
+  color: black;
+  cursor: pointer;
+}
+.form-control :focus {
+  outline: black !important;
+  border-color: black !important;
+  box-shadow: none !important;
+}
+.SignupPage {
+  height: 450px;
+  background-color: rgb(0, 0, 58);
+}
+.showPass {
+  position: absolute;
+  top: 0.01rem;
+  right: 1px;
+}
+.registerbtn {
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100%;
+  background-color: transparent;
+}
+.registerbtn:hover {
+  border-color: rgb(0, 0, 58);
+  background-color: rgb(0, 0, 58);
+  color: white;
+}
+.signin {
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.HomeFooter {
+  height: 80px;
+  border-left: 3px solid rgb(46, 27, 46);
+}
+footer p:hover {
+  color: rgb(3, 151, 250);
+}
+.footer {
+  height: 50px;
+}
