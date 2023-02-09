@@ -1,0 +1,215 @@
+.advertisementcase {
+    width: 50%;
+    /* background-color: red; */
+}
+
+.signupcase {
+    width: 50%;
+    position: relative;
+    height: 90vh;
+
+}
+
+.signupsection {
+    display: flex;
+    background-color: black;
+
+}
+
+
+
+.adv-case {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(220, 245, 245);
+    position: relative;
+    left: 175px;
+    top: 40px;
+}
+
+.food-img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-case {
+    text-align: center;
+    padding: 0px 80px 0px 80px;
+}
+
+.eatwelltext {
+    text-align: center;
+    background: #CA4246;
+    background-color: #CA4246;
+    background: conic-gradient(#CA4246 16.666%,
+            #41e14c 16.666%,
+            #E16541 33.333%,
+            #F18F43 33.333%,
+            #F18F43 50%,
+            #8B9862 50%,
+            #8B9862 66.666%,
+            #476098 66.666%,
+            #476098 83.333%,
+            #A7489B 83.333%);
+    background-size: 57%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-animation-rev 0.5s ease forwards;
+    cursor: pointer;
+}
+
+.eatwelltext:hover {
+    animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+
+@keyframes eatwelltext-animation {
+    0% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+}
+
+@keyframes rainbow-text-animation-rev {
+    0% {
+        background-size: 300%;
+        background-position: -9em 1em;
+    }
+
+    20% {
+        background-size: 57%;
+        background-position: 0 1em;
+    }
+
+    100% {
+        background-size: 57%;
+        background-position: 0 0;
+    }
+}
+
+.img-case {
+    width: 450px;
+    height: 400px;
+    margin: auto;
+}
+
+.form-case {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    /* left: 90px; */
+    top: 40px;
+    /* bottom: 300px; */
+    text-align: center;
+    padding: 30px;
+    grid-template: inherit;
+}
+
+.hr {
+    width: 180px;
+    margin-left: 18px;
+}
+
+.hr-case {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.forgot-password {
+    margin-left: 280px;
+}
+
+.google-sign {
+    width: 200px;
+    border: 0px;
+    background: 0;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.login-btn {
+    width: 200px;
+    border-radius: 30px;
+    margin-top: 25px;
+    border: 0;
+    background-color: rgb(41, 39, 39);
+    color: white;
+}
+
+
+.input {
+    width: 400px;
+    padding: 5px;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+}
+
+.inp-case {
+    margin-top: 20px;
+}
+
+
+/* forgotpassword */
+
+
+
+.top-color {
+    height: 50vh;
+    background-color: rgb(55, 163, 232);
+    width: 100%;
+}
+
+.fp-form {
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid;
+    position: absolute;
+    top: 100px;
+    left: 450px;
+}
+
+.bottom-color {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(78, 80, 88, 0.1);
+
+}
+
+.fp-forminp {
+    width: 400px;
+    padding: 5px;
+    margin-top: 20px;
+    /* border-radius: 20px; */
+    border: 1px solid rgb(78, 72, 72, 0.2);
+}
+
+.continue-btn {
+    width: 400px;
+    padding: 5px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: rgb(55, 163, 232);
+    border: 0;
+}
+
+.reset-form {
+    text-align: center;
+}

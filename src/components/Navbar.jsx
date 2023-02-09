@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav className="shadow d-flex justify-content-around p-2 ">
       {/* mobile navbar  */}
 
-      <Link to={"/"} className="fs-1 fw-bold text-dark">
-        Eat well
+      <Link to={"/"} className="fs-1 fw-bold eatwelltext">
+        Eatwell
       </Link>
 
       <button className="d-block d-md-none ms-auto barsbtn ">
@@ -49,8 +49,8 @@ const Navbar = () => {
           </span>
           SignUp
         </Link>
-        <Link className="mx-4 text-dark fs-5  ">
-          Login{" "}
+        <Link to={"/login"} className="mx-4 text-dark fs-5  ">
+          Login
           <span>
             <AiOutlineLogin />
           </span>
