@@ -49,8 +49,8 @@ const Navbar = () => {
           </span>
           SignUp
         </Link>
-        <Link className="mx-4 text-dark fs-5  ">
-          Login{" "}
+        <Link to={"/login"} className="mx-4 text-dark fs-5  ">
+          Login
           <span>
             <AiOutlineLogin />
           </span>
