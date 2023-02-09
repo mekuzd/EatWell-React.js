@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { useContext } from "react";
 import Alert from "../Components/Alert";
 import DefaultLayout from "../Layouts/DefaultLayouts";
 import { Link, useNavigate } from "react-router-dom";
-import { Context } from "../Provider/Context";
+import httpClient from "../Services/httpClient";
 
 const Signup = () => {
   const navigate = useNavigate();
-  const { Store, setStore } = useContext(Context);
+
   const [alert, setalert] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
 
@@ -18,15 +17,22 @@ const Signup = () => {
     password: "",
   });
 
+  const postUserDetails = async () => {
+    try {
+      const response = await httpClient.post("/regUsers", state.current);
+      setalert(true);
+      setalertMessage(response.data.message);
+    } catch (error) {
+      setalert(true);
+      setalertMessage(error.response.data.message);
+    }
+  };
+
   const firstname = useRef(null);
 
   useEffect(() => {
     firstname.current.focus();
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("users", JSON.stringify(Store));
-  }, [Store]);
 
   const closeAlert = () => {
     setalert(false);
@@ -34,14 +40,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let RegisteredUser = Store.find((store) => {
-      return store.email === state.current.email;
-    });
-
-    if (RegisteredUser) {
-      setalert(true);
-      setalertMessage("user already registered go to Login");
-    } else if (
+    if (
       !state.current.email.includes("@") &&
       state.current.firstname &&
       state.current.lastname &&
@@ -65,15 +64,7 @@ const Signup = () => {
       setalert(true);
       setalertMessage("password length at least 8 characters");
     } else {
-      let newStore = [...Store, { ...state.current }];
-      setStore(newStore);
-      setalert(true);
-      // navigate("/login");
-      setalertMessage("Registered Succesfully");
-      let input = document.getElementsByTagName("input");
-      for (let index = 0; index < input.length; index++) {
-        input[index].value = "";
-      }
+      postUserDetails();
     }
   };
 
@@ -87,7 +78,10 @@ const Signup = () => {
             To keep connected with us please Login with your personal info
           </p>
           <div className="text-center my-5">
-            <Link className="text-center text-white  border signin">
+            <Link
+              to={"/login"}
+              className="text-center text-white  border signin"
+            >
               Sign In
             </Link>
           </div>
