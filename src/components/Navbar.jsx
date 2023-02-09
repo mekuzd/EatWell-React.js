@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav className="shadow d-flex justify-content-around p-2 ">
       {/* mobile navbar  */}
 
-      <Link to={"/"} className="fs-1 fw-bold text-dark">
-        Eat well
+      <Link to={"/"} className="fs-1 fw-bold eatwelltext">
+        Eatwell
       </Link>
 
       <button className="d-block d-md-none ms-auto barsbtn ">
