@@ -34,8 +34,8 @@ a :hover {
 }
 .showPass {
   position: absolute;
-  top: 0.01rem;
-  right: 1px;
+  top: 20px;
+  right: 40px;
 }
 .registerbtn {
   padding: 10px;
