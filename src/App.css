@@ -138,6 +138,9 @@ section {
   border-top: 0px;
 }
 
+.input:focus {
+  outline: none;
+}
 .inp-case {
   margin-top: 20px;
 }
