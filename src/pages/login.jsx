@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import { FaKey, FaUserCircle } from "react-icons/fa";
 import Alert from "../Components/Alert";
+import httpClient from "../Services/httpClient";
 
 function Login() {
   const navigate = useNavigate();
@@ -22,6 +23,17 @@ function Login() {
     email.current.focus();
   });
 
+  const checkUserDetails = async () => {
+    try {
+      const response = await httpClient.post("/users", state.current);
+      setalert(true);
+      setalertMessage(response.data.message);
+    } catch (error) {
+      setalert(true);
+      setalertMessage(error.response.data.message);
+    }
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -31,6 +43,8 @@ function Login() {
     } else if (state.current.password.length < 8) {
       setalert(true);
       setalertMessage("Password length is less than 8");
+    } else {
+      checkUserDetails();
     }
   };
   const closeAlert = () => {
