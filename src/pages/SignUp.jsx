@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import Alert from "../Components/Alert";
 import DefaultLayout from "../Layouts/DefaultLayouts";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import httpClient from "../Services/httpClient";
 
 const Signup = () => {
-  const navigate = useNavigate();
-
   const [alert, setalert] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
 
@@ -22,7 +20,6 @@ const Signup = () => {
       const response = await httpClient.post("/regUsers", state.current);
       setalert(true);
       setalertMessage(response.data.message);
-      navigate("/login");
     } catch (error) {
       setalert(true);
       setalertMessage(error.response.data.message);

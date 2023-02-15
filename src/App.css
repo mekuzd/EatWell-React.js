@@ -97,7 +97,6 @@ section {
 
 .hr {
   width: 180px;
-  margin-left: 18px;
 }
 
 .hr-case {
@@ -112,11 +111,7 @@ section {
 }
 
 .google-sign {
-  width: 200px;
-  border: 0px;
-  background: 0;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  cursor: pointer;
 }
 
 .login-btn {
