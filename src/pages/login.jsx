@@ -59,12 +59,10 @@ function Login() {
           <form onSubmit={handleLogin} className="form-case col-sm-5">
             <h1 className="eatwelltext">Eatwell</h1>
             <h3>Welcome to Eatwell</h3>
-
             {/* alertmessage  */}
             {alert && (
               <Alert closeAlert={closeAlert} alertMessage={alertMessage} />
             )}
-
             <div className="inp-case">
               {/* username */}
               <div>
@@ -72,6 +70,7 @@ function Login() {
                   <FaUserCircle />
                 </span>
                 <input
+                  required
                   className="input"
                   ref={email}
                   placeholder="Email or Username"
@@ -84,6 +83,7 @@ function Login() {
                   <FaKey />
                 </span>
                 <input
+                  required
                   type={showPassword ? "text" : "password"}
                   className="input"
                   placeholder="Password"
@@ -97,9 +97,8 @@ function Login() {
                 </p>
               </div>
             </div>
-
-            {/* forgotpassword */}
-            <Link to="/forgotpassword" className="text-dark">
+            {/* forgotpassword */} <br />
+            <Link to="/forgotpassword" className="text-dark ">
               Forgot password?
             </Link>
             <br />
@@ -108,12 +107,13 @@ function Login() {
             </button>
             <div className="d-flex hr-case">
               <hr className="hr" />
-              <span>or</span>
+              <span className="mx-2">or</span>
               <hr className="hr" />
-            </div>
-            <button className="google-sign" type="button">
+            </div>{" "}
+            <br />
+            <p className="google-sign text-center">
               <AiOutlineGoogle color="red" size={22} /> Sign in with Google
-            </button>
+            </p>
             <p>
               New?{" "}
               <Link to={"/signup"} className="text-dark">
