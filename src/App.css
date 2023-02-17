@@ -176,3 +176,12 @@ section {
 .reset-form {
   text-align: center;
 }
+@media only screen and (min-width: 680px) {
+  .fp-form {
+    position: absolute;
+    top: 100px;
+  }
+  .top-color {
+    height: 50vh;
+  }
+}
