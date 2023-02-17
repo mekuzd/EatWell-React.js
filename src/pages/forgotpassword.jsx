@@ -1,12 +1,19 @@
+import { useEffect } from "react";
 import { useRef } from "react";
 
 import { FaLock } from "react-icons/fa";
 
 function Forgotpassword() {
   const mail = useRef({ email: "" });
+
+  useEffect(() => {
+    mail.current.focus();
+  });
   const handleForgetPassword = (e) => {
     e.preventDefault();
-    console.log(mail.current.email);
+    if (mail.current.email) {
+      console.log(mail.current.email);
+    }
   };
 
   return (
