@@ -25,7 +25,7 @@ function Login() {
 
   const checkUserDetails = async () => {
     try {
-      const response = await httpClient.post("/users", state.current);
+      const response = await httpClient.post("/users/search", state.current);
       setalert(true);
       setalertMessage(response.data.message);
     } catch (error) {
