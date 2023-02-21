@@ -17,7 +17,7 @@ const Signup = () => {
 
   const postUserDetails = async () => {
     try {
-      const response = await httpClient.post("/regUsers", state.current);
+      const response = await httpClient.post("/users/regUsers", state.current);
       setalert(true);
       setalertMessage(response.data.message);
     } catch (error) {
