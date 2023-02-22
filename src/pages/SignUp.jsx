@@ -1,13 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Alert from "../Components/Alert";
 import DefaultLayout from "../Layouts/DefaultLayouts";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import httpClient from "../Services/httpClient";
+import { Context } from "../Provider/Context";
 
 const Signup = () => {
   const [alert, setalert] = useState(false);
   const [alertMessage, setalertMessage] = useState("");
-
+  const { setEmail } = useContext(Context);
+  const navigate = useNavigate();
   const state = useRef({
     firstname: "",
     lastname: "",
@@ -20,6 +22,8 @@ const Signup = () => {
       const response = await httpClient.post("/users/regUsers", state.current);
       setalert(true);
       setalertMessage(response.data.message);
+      setEmail(state.current.email);
+      navigate("/otpverify");
     } catch (error) {
       setalert(true);
       setalertMessage(error.response.data.message);
