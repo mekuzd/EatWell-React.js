@@ -3,13 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ContextProvider from "./Provider/Context";
 
 const App = React.lazy(() => import("./App"));
 const Signup = React.lazy(() => import("./pages/SignUp"));
 const Login = React.lazy(() => import("./pages/login"));
 const Forgotpassword = React.lazy(() => import("./pages/forgotpassword"));
+const OtpVerify = React.lazy(() => import("./pages/OtpVerify"));
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,18 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/otpverify",
+    element: <OtpVerify />,
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Suspense>
-      <RouterProvider router={router} />
-    </Suspense>
+    <ContextProvider>
+      {" "}
+      <Suspense>
+        <RouterProvider router={router} />
+      </Suspense>
+    </ContextProvider>
   </React.StrictMode>,
 );
