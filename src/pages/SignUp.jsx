@@ -149,7 +149,6 @@ const Signup = () => {
               />
             </div>{" "}
             <br />
-            <p>Forgot Password?</p>
             <div className="text-center">
               <button type="submit" className="p-2 rounded registerbtn">
                 Register
