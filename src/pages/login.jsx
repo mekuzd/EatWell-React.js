@@ -112,7 +112,7 @@ function Login() {
               </div>
             </div>
             {/* forgotpassword */} <br />
-            <Link to="/forgotpassword" className="text-dark ">
+            <Link to="/Forgotpassword" className="text-dark ">
               Forgot password?
             </Link>
             <br />

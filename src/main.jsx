@@ -9,7 +9,7 @@ import ContextProvider from "./Provider/Context";
 const App = React.lazy(() => import("./App"));
 const Signup = React.lazy(() => import("./pages/SignUp"));
 const Login = React.lazy(() => import("./pages/login"));
-const Forgotpassword = React.lazy(() => import("./pages/forgotpassword"));
+const Forgotpassword = React.lazy(() => import("./pages/Forgotpassword"));
 const OtpVerify = React.lazy(() => import("./pages/OtpVerify"));
 
 const router = createBrowserRouter([

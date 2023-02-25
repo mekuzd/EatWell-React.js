@@ -9,14 +9,13 @@ const OtpVerify = () => {
   const [alertMessage, setalertMessage] = useState("");
   const { email } = useContext(Context);
   const submitOtp = useRef({ user_otp: "" });
-
+  console.log(submitOtp.current);
   const postUserOtp = async () => {
     try {
       const response = await httpClient.post(
         "/users/verifyotp",
         submitOtp.current,
       );
-      console.log(response);
       setalert(true);
       setalertMessage(response.data.msg);
     } catch (error) {
@@ -41,7 +40,8 @@ const OtpVerify = () => {
         <div className="m-auto">
           <form action="" onSubmit={handleVerifyOtp}>
             <p className="fw-bold fs-4">
-              please input the otp that was sent to {email}
+              please input the otp that was sent to {email} to verify your email
+              address
             </p>
             <input
               required
