@@ -9,7 +9,6 @@ const OtpVerify = () => {
   const [alertMessage, setalertMessage] = useState("");
   const { email } = useContext(Context);
   const submitOtp = useRef({ user_otp: "" });
-  console.log(submitOtp.current);
   const postUserOtp = async () => {
     try {
       const response = await httpClient.post(

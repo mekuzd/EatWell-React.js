@@ -11,6 +11,7 @@ const Signup = React.lazy(() => import("./pages/SignUp"));
 const Login = React.lazy(() => import("./pages/login"));
 const Forgotpassword = React.lazy(() => import("./pages/Forgotpassword"));
 const OtpVerify = React.lazy(() => import("./pages/OtpVerify"));
+const ChangePass = React.lazy(() => import("./pages/changePass"));
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/otpverify",
     element: <OtpVerify />,
+  },
+  {
+    path: "/changePassword",
+    element: <ChangePass />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -23,6 +23,7 @@ function Forgotpassword() {
       setalert(true);
       setalertMessage(response.data.msg);
       setEmail(mail.current.email);
+      navigate("/changePassword");
     } catch (error) {
       setalert(true);
       setalertMessage(error.response.data.msg);

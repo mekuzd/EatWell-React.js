@@ -9,7 +9,7 @@ const Alert = ({ closeAlert, alertMessage }) => {
 
   return (
     <div>
-      <p className="text-center ">{alertMessage}</p>
+      <p className="text-center fw-bold ">{alertMessage}</p>
     </div>
   );
 };
